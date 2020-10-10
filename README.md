@@ -33,7 +33,7 @@ GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
 #### 安装Docker
 ```shell
 curl https://releases.rancher.com/install-docker/18.09.2.sh | sh
- useradd docker -g docker
+useradd docker -g docker
 ```
 
 

@@ -1,9 +1,15 @@
-#### 关闭Selinux
+# 关闭Selinux
 ```shell
 setenforce 0
 ```
 
 # 关闭防火墙
+## 关闭防火墙
+### 关闭防火墙
+#### 关闭防火墙
+##### 关闭防火墙
+###### 关闭防火墙
+
 ```shell
 systemctl stop firewalld
 systemctl disable firewalld

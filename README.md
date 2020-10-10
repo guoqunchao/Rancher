@@ -1,4 +1,4 @@
-关闭Selinux
+## 关闭Selinux
 ```shell
 setenforce 0
 ```

@@ -2,11 +2,13 @@
 ```shell
 setenforce 0
 ```
+
 #### 关闭防火墙
 ```shell
 systemctl stop firewalld
 systemctl disable firewalld
 ```
+
 #### 设置IPV4转发
 ```shell
 vim /etc/sysctl.conf
@@ -14,6 +16,7 @@ net.ipv4.ip_forward = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 ```
+
 #### 禁用Swap,否则kubelet组件无法运行
 ```shell
 vim /etc/fstab # 注释掉swap项。
@@ -27,8 +30,18 @@ GRUB_CMDLINE_LINUX="cgroup_enable=memory swapaccount=1"
 注意：要执行sudo update-grub 更新grub，然后重启系统后生效。
 ```
 
-wget https://github.com/rancher/rke/releases/download/v1.1.9/rke_linux-amd64
+#### 安装Docker
+```shell
+curl https://releases.rancher.com/install-docker/18.09.2.sh | sh
+ useradd docker -g docker
+```
 
+
+
+
+```shell
+wget https://github.com/rancher/rke/releases/download/v1.1.9/rke_linux-amd64
+```
 
 #### 常见问题
 ```shell
